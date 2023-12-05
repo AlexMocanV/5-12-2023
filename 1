@@ -1,0 +1,24 @@
+#include <iostream>
+
+using namespace std;
+
+int n,v[41],i,s=2;
+
+int main()
+{
+    cin>>n;
+    v[1]=1;
+    v[2]=1;
+    for(i=3;i<=n;i++)
+    {
+        v[i]=v[i-1]+v[i-2];
+        s+=v[i];
+    }
+    cout<<s;
+    //for(i=1;i<=n;i++)
+    //{ mai sus e suma primilor n termeni al sirului lui fibonaci;
+        //cout<<v[i]<<" ";
+    //}
+
+    return 0;
+}
