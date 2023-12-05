@@ -1,0 +1,21 @@
+#include <iostream>
+
+using namespace std;
+
+int n,v[41],i,nr;
+
+int main()
+{
+    cin>>nr;
+    v[1]=1;
+    v[2]=1;
+    for(i=3;i<=100001;i++)
+    {
+        v[i]=v[i-1]+v[i-2];
+    }
+    cout<<v[nr];
+    // al nr numar 
+
+    
+    return 0;
+}
